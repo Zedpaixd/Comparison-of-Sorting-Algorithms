@@ -27,9 +27,9 @@ This paper presents a comparison of Bubble, Insertion, Merge, Quick, Heap and Co
 
 \end{abstract}
 \normalsize
-\pagebreak
+\clearpage
 \tableofcontents
-\pagebreak
+\clearpage
 
 \section{Introduction}
 A sorting algorithm is an algorithm that is given a list of elements alongside other minor details and arranges the elements of the list in an increasing or decreasing manner. Until today, a lot of such algorithms have been created, however some may be better than others. A sorting algorithm can be comparison based, such algorithms being: Bubble sort, Merge sort, Insertion sort, etc; and they can also be non comparison based, for example Radix Sort, Counting sort and Bucket Sort. The main objective of this paper is to find the fastest algorithm to sort a list and during that, we will encounter other circumstances under which some particular algorithm may work better than the others. The language used is the C language together with the GNU compiler.
@@ -78,12 +78,12 @@ However, there exist other complexities too, complexities such as:
 \end{minipage}%
 
 
-\pagebreak
+\clearpage
 
 \begin{center}
    \section{Working procedure of the algorithms} 
 \end{center}
-
+\bigskip
 \begin{multicols}{2}
 \titlespacing*{\subsection}
   {0pt}{4\baselineskip}{1.5\baselineskip}
@@ -201,7 +201,7 @@ Invented by Harold H. Seward in 1954, Counting sort is an algorithm based more o
 
 
 \end{multicols}
-\pagebreak
+\clearpage
 
 
 \section{The algorithm comparison}
@@ -226,24 +226,24 @@ The data types used in this evaluation vary from 10 to 900.000 elements and are 
 \begin{center}
 \section{Visualisation of final times}    
 
-\includegraphics[width=12cm, height=6.5cm]{Random list.png}
+\includegraphics[width=12.2cm, height=6.5cm]{Random list.png}
 As shown in the image above, the lowest run-time was achieved by Counting sort paired with Insertion sort. Some mandatory information is that the list was made solely out of positive integers since at the first occurrence of a negative integer, Counting sort would stop working, therefore the most optimal algorithm in this case would be Quick sort and Heap sort.
 \bigbreak
-\includegraphics[width=12cm, height=6.5cm]{Half Sorted list.png}
+\includegraphics[width=12.2cm, height=6.5cm]{Half Sorted list.png}
 Similar results, one thing we can notice is that Quick sort performs worse in this particular scenario, thus Heap sort will be a slightly better option in this particular scenario.
-\includegraphics[width=12cm, height=6.5cm]{Almost Sorted list.png}
+\includegraphics[width=12.2cm, height=6.5cm]{Almost Sorted list.png}
 The first major changes can be found here, in the case of an almost sorted list, Quick sort performs increasing worse compared to other algorithms, hence why it is labeled as an unstable algorithm. However, that is not the only surprise factor, but also the fact that Insertion sort now performs better than every other algorithm tested. Keeping track of the fact that these lists do not use negative elements just so Counting sort will work properly, we can conclude that our best options in case of almost sorted lists would be Insertion sort and Heap sort.
 \bigbreak
-\includegraphics[width=12cm, height=6.5cm]{Reverse Sorted list_.png}
+\includegraphics[width=12.2cm, height=6.5cm]{Reverse Sorted list_.png}
 Another surprise can be noticed in the case of a reverse sorted list, which is that once again, Quick sort performs worse than many of the other algorithms tested, other than that no other unexpected outcomes can be noticed. Once again, Heap sort is one of the safest options but this time Merge sort being a fairly close second.
-\includegraphics[width=12cm, height=6.5cm]{Sorted list.png}
+\includegraphics[width=12.2cm, height=6.5cm]{Sorted list.png}
 Absolutely no surprises in the case of a sorted list, according to the previous time results, Quick sort being among the slowest is an expected outcome, similarly for Insertion sort being one of the fastest ones. Safest options in this case are Insertion sort and Heap sort.
 \bigbreak
-\includegraphics[width=12cm, height=6.5cm]{Small Ints list.png}
+\includegraphics[width=12.2cm, height=6.5cm]{Small Ints list.png}
 And lastly, a list created especially to ruin the run-time of Quick sort. The list is completely random, therefore the other algorithms will not have any advantage, however its unstableness in regards to small integer lists is resolute. The safest options once again shall not come as a surprise.
 \end{center}
 
-\pagebreak
+\clearpage
 \section{Conclusion}
 When it comes to sorting algorithms, a "best" option is a very subjective one with lots of influential factors, starting from the kind of data given, to the content of it or even its size. That being said, the closest to a more stable option out of the tested algorithms is Heap sort, however depending on the data type, better options do exist.
 

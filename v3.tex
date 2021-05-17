@@ -15,14 +15,19 @@
 
 
 \title{Comparison of Sorting Algorithms}
-\author{Armand Alexandru Balint\\}
+\small
+\author{Armand Alexandru Balint\\
+Department of Computer Science,\\
+West University\\
+Timisoara, Romania\\
+Email: \href{mailto:armand.balint02@e-uvt.ro}{armand.balint02@e-uvt.ro}}
 \date{April 2021}
 
 \begin{document}
 
 \maketitle
 \begin{abstract}
-This paper presents a comparison of Bubble, Insertion, Merge, Quick, Heap and Counting sort with the sole purpose of finding the fastest algorithm to sort different types of lists. In the case of this paper, the files used were following different patterns of integers / floats such that there is every kind of list from a completely sorted array to a purely random one; the algorithms were then ran through the lists and had their results analyzed then written into graphs and afterwards compared. Theoretical aspects were presented and the algorithms were explained, then with that information, some expectations regarding possible outcomes were formed. The results were then grouped into individual ones for each different array type and the overall results provided the answer to the question: "Which is the better sorting algorithm between the ones tested?" \newline \newline \textbf{Keywords:} \footnotesize Bubble sort, Insertion sort, Heap sort, Merge sort, Counting sort, Algorithm implementations, Algorithm comparison
+This paper presents a comparison of Bubble, Insertion, Merge, Quick, Heap and Counting sort with the sole purpose of finding the fastest algorithm to sort different types of lists. In the case of this paper, the files used were following different patterns of integers / floats such that there is every kind of list from a completely sorted array to a purely random one; the lists were then ran through the algorithms and had their results analyzed then written into graphs and afterwards compared. Theoretical aspects were presented and the algorithms were explained, then with that information, some expectations regarding possible outcomes were formed. The results were then grouped into individual ones for each different array type and the overall results provided the answer to the question: "Which is the better sorting algorithm option between the ones tested?" \newline \newline \textbf{Keywords:} \footnotesize Bubble sort, Insertion sort, Heap sort, Merge sort, Counting sort, Algorithm implementations, Algorithm comparison
 
 
 \end{abstract}
@@ -31,7 +36,7 @@ This paper presents a comparison of Bubble, Insertion, Merge, Quick, Heap and Co
 \clearpage
 
 \section{Introduction}
-A sorting algorithm is an procedure that solves a sorting problem. It is given a sequence of numbers (a$_1$,a$_2$,a$_3$,a$_4$...,a$_n$) alongside other minor details and arranges the elements of the list in an increasing (a$_1$<a$_2$<..<a$_n$) or decreasing (a$_1$>a$_2$>...>a$_n$) manner. Until today, a lot of such algorithms have been created, however some may perform better than others. A sorting algorithm can be of two types: Comparison based (such as: Bubble sort, Merge sort, Insertion sort, etc) and Non-comparison based(Radix Sort, Counting sort, Bucket Sort). The main objective of this paper is to find the safest sorting algorithm to use when sorting a list. During that, we may also encounter other circumstances under which some particular algorithm may work better than the others.
+A sorting algorithm is an procedure that solves a sorting problem. It is given a sequence of numbers (a$_1$,a$_2$,a$_3$,a$_4$...,a$_n$) alongside other minor details (such as size, first/last element, and so on) and arranges the elements of the list in an increasing (a$_1$<a$_2$<..<a$_n$) or decreasing (a$_1$>a$_2$>...>a$_n$) manner. Until today, a lot of such algorithms have been created, however some may perform better than others. A sorting algorithm can be of two types: Comparison based (such as: Bubble sort, Merge sort, Insertion sort, etc) and Non-comparison based(Radix Sort, Counting sort, Bucket Sort). The main objective of this paper is to find the safest sorting algorithm to use when sorting a list. During that, we may also encounter other circumstances under which some particular algorithm may work better than the others.
 
 \subsection{Comparison Based Sorting}
 Upon the thought of sorting an array, comparison based sorting is probably the most common option due to the fact that it is mostly based on taking 2 numbers, comparing some aspect of them, most often which is bigger than the other, and based on that a conclusion will be drawn, whether it is to swap, not swap or to insert the element in another array.
@@ -43,13 +48,13 @@ Non comparison based sorting still makes use of comparisons however not as the p
 The Divide and Conquer$^{[4]}$ approach, has the main goal of breaking a problem into sub-problems that are similar to the original problem recursively and then solving them once the sub-problems are small enough, combining the solutions to the sub-problems once finished to solve the original problem. Due to the fact that divide-and-conquer solves sub-problems recursively, each sub-problem must be smaller than the original one and there must be a base case for each sub-problem, therefore, each divide-and-conquer algorithm has three main parts: Divide the problem into multiple pieces, Conquer the sub-problems by solving them recursively via the base cases and finally, the combinations which, as expected, merge the sub-problems back into a big one.
 
 \section{Classification}
-In this paper, the classification of the algorithms will be done by comparing their run time with respect to the input size and the specific requirements each one of them have. Thus, an algorithm will not be deemed as the "best" one if it is unable to sort a list of negative integers or other special cases.
+In this paper, the classification of the algorithms will be done by comparing their run time with respect to the input size and the specific requirements each one of them have. Thus, an algorithm will not be deemed as the "best" one if it is unable to sort a list of negative integers or any other special cases.
 
 \subsection{Execution Time Bounds}
-Sorting algorithms are characterized by the big O notation. This notation indicates the highest possible complexity (which heavily impacts the run time) of the algorithm, it can also be referred to as an upper bound and the most common notations that will be used in this paper are:
+Sorting algorithms are characterized by the big O notation. This notation indicates the highest possible complexity of the algorithm (which heavily impacts the run time). It can also be referred to as an upper bound and the most common notations that will be used in this paper are:
 
 \begin{itemize}
-\item \textbf{O(n)} represents a linear graph and is the best time complexity a sorting algorithm can have, at least until a better algorithm is discovered. 
+\item \textbf{O(n)} represents a linearly increasing graph line and is the best time complexity a sorting algorithm can have, at least until a better algorithm is discovered. 
 
 
 \item \textbf{O(n*log$_2$n)} is a slightly higher time complexity, however not by a lot, therefore this complexity is still considered efficient. Also proven to be the lowest achievable bound for comparison based sorting $^{[11]}$
@@ -58,7 +63,7 @@ Sorting algorithms are characterized by the big O notation. This notation indica
 \item \textbf{O(n$^2$)} is the worst time complexity out of the 3 stated, given the fact that it is a quadratic one, therefore it making the graph scale increase enormously in the case of an increase of the input size.
 \end{itemize}
 
-However, there exist other complexities too, complexities such as:
+However, other complexities exist too, such as:
 \newline
 \begin{minipage}{0.45\textwidth}
 \begin{itemize}
@@ -79,9 +84,9 @@ However, there exist other complexities too, complexities such as:
 
 \clearpage
 
-\begin{center}
+
    \section{Working procedure of the algorithms} 
-\end{center}
+
 \bigskip
 \begin{multicols}{2}
 \titlespacing*{\subsection}
@@ -163,7 +168,7 @@ Developed by Tony Hoare in 1959, Quick sort, similarly to Merge sort, is another
 
 
 \subsection{Heap sort}
-Created by J.W.J. Williams in 1964, Heap sort is a comparison based sorting algorithm$^{[8]}$ where it  finds the greatest element and places it at the end then repeats the procedure by finding the second greatest and placing it at the end-1 position. This whole task is done through a binary heap where items are stored in a tree-like scheme where every level, at times except the last, is completely filled. By the end, we will have a complete binary tree where the parent node is greater(or smaller, depending on the sorting goal) than the values of its two children nodes.
+Created by J.W.J. Williams in 1964, Heap sort is a comparison based sorting algorithm$^{[8]}$ where it  finds the greatest element and places it at the end then repeats the procedure by finding the second greatest and placing it at the end-1 position. This whole task is done through a binary heap where each member has 2 children and items are stored in a tree-like scheme where every level, at times except the last, is completely filled (has 2 children) . By the end, we will have a complete binary tree where the parent node is greater(or smaller, depending on the sorting goal) than the values of its two children nodes.
 \subsubsection{Time complexities}
 \begin{itemize}
     \item Best case: \textbf{O(n*log$_2$n)}
@@ -182,7 +187,7 @@ Created by J.W.J. Williams in 1964, Heap sort is a comparison based sorting algo
 
 
 \subsection{Counting sort}
-Invented by Harold H. Seward in 1954, Counting sort is an algorithm based more on addition and subtraction rather than comparisons$^{[9]}$. It works by counting the number of objects having distinct key values and then counting the number of time each number appears in the given array, storing it as an index in a temporary array such that if it does not exist, we initialize it by giving the indexed array slot the value 1 and if it already exists, we increment it by one.
+Invented by Harold H. Seward in 1954, Counting sort is an algorithm based more on addition and subtraction rather than comparisons$^{[9]}$. It works by counting the number of objects having distinct key values and then counting the number of time each number appears in the given array, storing it as an index in a temporary array such that if it does exist, we initialize it by giving the indexed array slot the value 1 and if it already exists, we increment it by one, while a non existing element will not be initialized. Having the index-sorted list done, all that will be left to do  from there on is printing them in order of it's increasing index x times, where x signifies the element's appearance count. 
 \subsubsection{Time complexities}
 \begin{itemize}
     \item Best case: \textbf{O(n)}
@@ -190,13 +195,12 @@ Invented by Harold H. Seward in 1954, Counting sort is an algorithm based more o
     \item Worst case: \textbf{O(n)}
 \end{itemize}
 
+
 \subsubsection{Extras}
 \begin{itemize}
     \item Sorting in place: \textcolor{red}{No}
     \item Stable: \textcolor{red}{No}
 \end{itemize}
-
-\bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak \bigbreak
 
 
 \end{multicols}
@@ -204,7 +208,7 @@ Invented by Harold H. Seward in 1954, Counting sort is an algorithm based more o
 
 
 \section{The algorithm comparison}
-To begin, the algorithms were taken from$^{[10]}$ and written in the C language, in the Code:Blocks environment. Comparing the different sorting algorithms was done using a program also written in the C language and compiled via the GNU compiler on an Intel i7 7700 processor running at 4 GHz, therefore the results achieved in this paper may differ from other results achieved by others using the same program, however the growth in each is going to be similar. 
+To begin, the algorithms were taken from$^{[10]}$ and written in the C language, in the Code:Blocks environment. Comparing the different sorting algorithms was done using a program also written in the C language and compiled via the GNU compiler on an Intel i7 7700 processor running at 4 GHz with 32GB of ram @ 2133mhz, therefore the results achieved in this paper may differ from other results achieved by others using the same program, however the growth in each is going to be similar. 
 \subsection{Comparison algorithm implementation}
 First and foremost, the source code used can be found at the following link:  \href{https://github.com/Zedpaixd/SortingComparison}{https://github.com/Zedpaixd/SortingComparison}. That being said, the program will be given different types of lists, ordered by their types, which will be described further along, and will then run the lists through each sorting algorithm, using a 6 digit float precision timer which then will output the results of each algorithm on every given list. One thing worth noting is the fact that not every sorting algorithm used can sort every data type, such as floats, and in that case, they have been paired up with another algorithm which has the lowest run-time in sorting the remains of the list to finish off the job.
 \subsection{Data types used}
@@ -233,10 +237,10 @@ The data types used were generated by a program written in the Python language a
 \smallbreak
 \includegraphics[width=12.2cm, height=6.5cm]{Pics/Half Sorted list.png}
 
-Similar results, one thing we can notice is that Quick sort performs worse in this particular scenario, thus Heap sort will be a slightly better option in this particular scenario.
+Similar results, one thing we can notice is that Quick sort performs worse in this particular scenario, thus Heap sort will be a slightly better option.
 \includegraphics[width=12.2cm, height=6.5cm]{Pics/Almost Sorted list.png}
 
-The first major changes can be found here, in the case of an almost sorted list, Quick sort performs increasing worse compared to other algorithms, hence why it is labeled as an unstable algorithm. However, that is not the only surprise factor, but also the fact that Insertion sort now performs better than every other algorithm tested. Having known the fact that the lists do not use negative elements just so Counting sort will work properly, we can conclude that our best options in case of almost sorted lists would be Insertion sort and Heap sort.
+The first major changes can be found here, in the case of an almost sorted list, Quick sort performs increasingly worse compared to other algorithms, hence why it is labeled as an unstable algorithm. However, that is not the only surprise factor, but also the fact that Insertion sort now performs better than every other algorithm tested. Having known the fact that the lists do not use negative elements just so Counting sort will work properly, we can conclude that our best options in case of almost sorted lists would be Insertion sort and Heap sort.
 \smallbreak
 \includegraphics[width=12.2cm, height=6.5cm]{Pics/Reverse Sorted list_.png}
 
@@ -288,3 +292,5 @@ Other Sorting Algorithms on Different Platforms" IJCSNS International Journal of
 [11] Luebke, D. (2013). Lecture slides. CS 332: Algorithms. Linear-Time Sorting Algorithms
 
 \end{document}
+
+
